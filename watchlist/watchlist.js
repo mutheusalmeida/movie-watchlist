@@ -1,11 +1,11 @@
-import { renderData, handleReadMoreClick, handleAddToWatchlist, handleLocalStorage } from './utils.js'
-import './style.css'
+import { renderData, handleReadMoreClick, handleAddToWatchlist, handleLocalStorage } from '../utils.js'
+import '../style.css'
 
 document.querySelector('[data-js="root"]').innerHTML = `
   <div class="app">
     <header class="app__header">
         <h1 class="app__title" title="My Watchlist">
-            <a href="/watchlist.html">My Watchlist</a>
+            <a href="/watchlist/">My Watchlist</a>
         </h1>
         
         <a href="/" class="app__link">Search for movies</a>

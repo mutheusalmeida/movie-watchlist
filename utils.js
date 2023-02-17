@@ -39,7 +39,7 @@ const renderData = (isLoading, hasError, container, data) => {
   }
   
   container.classList.add('justify-start')
-  const hasAlternativeBorder = window.location.pathname.includes('/watchlist.html')
+  const hasAlternativeBorder = window.location.pathname.includes('/watchlist/')
   
   container.innerHTML = `
       <ul class="film-list">

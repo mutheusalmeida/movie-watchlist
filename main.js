@@ -8,7 +8,7 @@ document.querySelector('[data-js="root"]').innerHTML = `
             <a href="/">Find your film</a>
         </h1>
         
-        <a href="/watchlist.html" class="app__link">My watchlist</a>
+        <a href="/watchlist/" class="app__link">My watchlist</a>
     </header>
 
     <main class="content content-empty">
