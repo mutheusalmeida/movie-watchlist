@@ -1,0 +1,291 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+html, body {
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: #fff;
+  background-color: #121212;
+}
+
+.app {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.app__header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5.125em 2.75em;
+  background-color: #0E0E0E;
+  position: relative;
+}
+
+.app__header > * {
+  z-index: 1;
+}
+
+.app__header::after {
+  content: '';
+  position: absolute;
+  background: url(https://i.ibb.co/jh9VL3x/image-36.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: auto;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+}
+
+.app__title {
+  font-size: 2.625rem;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.app__link {
+  font-weight: 700;
+  font-size: 0.875rem;
+  line-height: 1.4285em;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  padding: 3.8125em 1em;
+}
+
+.search {
+  display: flex;
+  font-size: 0.875rem;
+  line-height: 1.4285em;
+  height: 2.7142em;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  position: absolute;
+  top: 0%;
+  transform: translateY(-50%);
+  padding: 0 1em;
+}
+
+@media (min-width: 493px) {
+  .search {
+    padding: 0;
+    max-width: 33em;
+  }
+}
+
+.search__input-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.search__icon {
+  position: absolute;
+  top: 50%;
+  left: 0.8125em;
+  transform: translateY(-50%);
+}
+
+.search__input {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 0 2.9285em;
+  background-color: #2E2E2F;
+  border: none;
+  border-radius: 6px 0px 0px 6px;
+  font-size: inherit;
+  font-weight: 500;
+  color: #A5A5A5;
+}
+
+.search__input::placeholder {
+  color: inherit;
+}
+
+.search__btn {
+  padding: 0 2.5714em;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  border: none;
+  background-color: #4B4B4B;
+  border-radius: 0px 6px 6px 0px;
+  cursor: pointer;
+}
+
+
+.content__wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  justify-content: center;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.empty--no-items {
+  gap: 0.9375em;
+}
+
+.empty__title {
+  font-size: 1.125rem;
+  line-height: 1.1111em;
+  margin: 0;
+  color: #2E2E2F;
+}
+
+.empty__title--no-results {
+  color: #787878;
+  text-align: center;
+  max-width: 17.8333em;
+}
+
+.empty__title--no-items {
+  color: #787878;
+  line-height: 1.5555em;
+  text-align: center;
+}
+
+.empty__add-to-watchlist {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  text-align: center;
+  display: flex;
+  gap: 7px;
+}
+
+.film-list {
+  padding: 0;
+  width: 100%;
+  max-width: 28.875em;
+}
+
+.film-list > li:last-child > div {
+  border: none;
+}
+
+.film-list__item {
+  list-style: none;
+}
+
+.film {
+  display: flex;
+  align-items: center;
+  gap: 1.3125em;
+  padding: 1.5em 0;
+  border-bottom: 1.5px solid #2C2C2C;
+}
+
+.gray-border {
+  border-color: #E5E7EB;
+}
+
+.film__img {
+  border-radius: 2px;
+  width: 6.25em;
+  display: block;
+  height: 9.1875em;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.film__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.film__title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.film__title-wrapper > svg {
+  min-width: 0.9375em;
+  height: 0.9375em;
+}
+
+.film__title {
+  margin: 0;
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.1111em;
+}
+
+.film__rating {
+  font-size: 0.75rem;
+  line-height: 1.25em;
+}
+
+.film__details-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  line-height: 1.6666em;
+  gap: 0.8333em;
+}
+
+.film__add-to-watchlist {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: inherit;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.film__desc {
+  font-size: 0.875rem;
+  line-height: 1.4285em;
+  color: #A5A5A5;
+}
+
+.film__read-more {
+  font-size: 0.75rem;
+  color: #FFF;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
